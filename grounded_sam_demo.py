@@ -209,6 +209,8 @@ if __name__ == "__main__":
     predictor.set_image(image)
 
     size = image_pil.size
+    
+    print("row image size: ", size)
     H, W = size[1], size[0]
     for i in range(boxes_filt.size(0)):
         boxes_filt[i] = boxes_filt[i] * torch.Tensor([W, H, W, H])
